@@ -13,6 +13,7 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/dotenv": "^1.4.1",
+    "gsap": "^3.2.6",
     "nuxt": "^2.0.0",
     "nuxt-webfontloader": "^1.1.0",
     "sass-mq": "^5.0.1",

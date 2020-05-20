@@ -1,6 +1,4 @@
-# boilerplate
-
-> boilerplate
+# Frontend Boilerplate
 
 ## Build Setup
 
@@ -18,5 +16,11 @@ $ npm run start
 # generate static project
 $ npm run generate
 ```
+
+## 3rd Party Features
+* Webfontloader
+* Axios
+* Dotenv
+* Sass MQ
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).

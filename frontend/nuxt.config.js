@@ -1,3 +1,4 @@
+require('dotenv').config()
 
 export default {
   mode: 'spa',
@@ -23,6 +24,7 @@ export default {
   ** Global CSS
   */
   css: [
+    { src: '~/assets/scss/main.scss' }
   ],
   /*
   ** Plugins to load before mounting the App
@@ -40,7 +42,19 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+	'@nuxtjs/dotenv',
+  	'nuxt-webfontloader'
   ],
+  /*
+  ** Web font loader
+  */
+  webfontloader: {
+    google: {
+		families: [ 
+			"Fira Sans Extra Condensed:400,800"
+		],
+    },
+  },
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options

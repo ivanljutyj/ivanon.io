@@ -1,8 +1,8 @@
 {
-  "name": "boilerplate",
+  "name": "frontend-boilerplate",
   "version": "1.0.0",
-  "description": "boilerplate",
-  "author": "Ivan Ivanoff",
+  "description": "",
+  "author": "Ivan Ivanoff <contact@ivanon.io>",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -11,8 +11,14 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/dotenv": "^1.4.1",
     "nuxt": "^2.0.0",
-    "@nuxtjs/axios": "^5.3.6"
+    "nuxt-webfontloader": "^1.1.0",
+    "sass-mq": "^5.0.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "node-sass": "^4.14.1",
+    "sass-loader": "^8.0.2"
+  }
 }

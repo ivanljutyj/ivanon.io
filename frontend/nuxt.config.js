@@ -19,7 +19,7 @@ export default {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: false,
   /*
   ** Global CSS
   */
@@ -50,7 +50,7 @@ export default {
   */
   webfontloader: {
     google: {
-		families: [ 
+		families: [
 			"Fira Sans Extra Condensed:400,800"
 		],
     },

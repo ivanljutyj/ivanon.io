@@ -15,7 +15,8 @@
     "@nuxtjs/dotenv": "^1.4.1",
     "nuxt": "^2.0.0",
     "nuxt-webfontloader": "^1.1.0",
-    "sass-mq": "^5.0.1"
+    "sass-mq": "^5.0.1",
+    "vue-scrollmagic": "^1.2.0"
   },
   "devDependencies": {
     "node-sass": "^4.14.1",

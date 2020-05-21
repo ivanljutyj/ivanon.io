@@ -44,6 +44,7 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
 	'@nuxtjs/dotenv',
+	'@nuxtjs/style-resources',
   	'nuxt-webfontloader'
   ],
   /*
@@ -61,6 +62,14 @@ export default {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
+  },
+  /*
+  ** Style resources
+  */
+  styleResources: {
+    scss: [
+      '~/assets/scss/*/*.scss',
+    ],
   },
   /*
   ** Build configuration

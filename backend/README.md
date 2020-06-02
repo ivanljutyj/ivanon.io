@@ -1,4 +1,4 @@
-### Strapi
+# Strapi
 
 ## First step
 ```

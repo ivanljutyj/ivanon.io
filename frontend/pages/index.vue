@@ -96,8 +96,6 @@
         gsap.to(dot, { y: position, x: coords.left });
       },
       updateUrl(path) {
-        // this.$router.push('/' + path)
-        // this.$route.params.slug = path;
         const i = { title: path, url: window.location.origin + '/' + path };
         window.history.pushState(i, path, path);
       },
@@ -130,16 +128,9 @@
       this.getSections();
       window.addEventListener('scroll', this.scroll, false)
 
-      if (this.$route.params.slug) {
-        this.sections.forEach(section => section.id === this.$route.params.slug ? this.currentSection = section : null);
-        const element = document.getElementById('post-' + this.$route.params.slug);
-        if (element) {
-          element.scrollIntoView();
-        }
-      } else {
-        this.sections.forEach(section => section.id === 'ivanon' ? this.currentSection = section : null);
-        document.getElementById('post-ivanon').scrollIntoView();
-      }
+      this.updateUrl('ivanon');
+      this.sections.forEach(section => section.id === 'ivanon' ? this.currentSection = section : null);
+      document.getElementById('post-ivanon').scrollIntoView();
 
     }
   }

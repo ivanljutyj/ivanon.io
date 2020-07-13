@@ -96,8 +96,6 @@
         gsap.to(dot, { y: position, x: coords.left });
       },
       updateUrl(path) {
-        // this.$router.push('/' + path)
-        // this.$route.params.slug = path;
         const i = { title: path, url: window.location.origin + '/' + path };
         window.history.pushState(i, path, path);
       },
@@ -136,11 +134,7 @@
         if (element) {
           element.scrollIntoView();
         }
-      } else {
-        this.sections.forEach(section => section.id === 'ivanon' ? this.currentSection = section : null);
-        document.getElementById('post-ivanon').scrollIntoView();
       }
-
     }
   }
 </script>
@@ -179,11 +173,14 @@
       &__images {
         display: flex;
         background-color: #000;
-        min-height: 400px;
         min-width: 100%;
         padding: 0 50px;
         @include mq($from: desktop) {
           padding: 0 100px;
+          min-height: 400px;
+        }
+        @include mq($until: desktop) {
+          min-height: 250px;
         }
         img {
           margin: auto;

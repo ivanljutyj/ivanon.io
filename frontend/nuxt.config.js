@@ -43,8 +43,7 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/dotenv',
     '@nuxtjs/style-resources',
-  	'nuxt-webfontloader',
-    ['vue-scrollto/nuxt', { duration: 300 }]
+  	'nuxt-webfontloader'
   ],
   /*
   ** Web font loader

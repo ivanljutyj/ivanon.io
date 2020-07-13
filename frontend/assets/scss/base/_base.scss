@@ -7,6 +7,14 @@
  */
 html {
   box-sizing: border-box;
+  letter-spacing: 0.3px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: #faed27;
 }
 
 /**
@@ -25,11 +33,11 @@ html {
  * Basic styles for links
  */
 a {
-  color: $brand-color;
+  color: $text-color;
   text-decoration: none;
 
   @include on-event {
-    color: $text-color;
-    text-decoration: underline;
+    background-color: #eae9ff;
+    cursor: pointer;
   }
 }

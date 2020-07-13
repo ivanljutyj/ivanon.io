@@ -1,7 +1,7 @@
 require('dotenv').config()
 
 export default {
-  mode: 'spa',
+  mode: 'universal',
   /*
   ** Headers of the page
   */
@@ -29,23 +29,22 @@ export default {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [
-	  { src: '~plugins/vue-scrollmagic.js' }
-  ],
+  plugins: [],
   /*
   ** Nuxt.js dev-modules
   */
   buildModules: [
+	  ['@nuxtjs/google-analytics', { id: 'UA-12301-2' }]
   ],
   /*
   ** Nuxt.js modules
   */
   modules: [
-    // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-	'@nuxtjs/dotenv',
-	'@nuxtjs/style-resources',
-  	'nuxt-webfontloader'
+    '@nuxtjs/dotenv',
+    '@nuxtjs/style-resources',
+  	'nuxt-webfontloader',
+    ['vue-scrollto/nuxt', { duration: 300 }]
   ],
   /*
   ** Web font loader
@@ -53,7 +52,7 @@ export default {
   webfontloader: {
     google: {
 		families: [
-			"Fira Sans Extra Condensed:400,800"
+			"Muli:500,600"
 		],
     },
   },
@@ -62,6 +61,7 @@ export default {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
+    baseURL: 'https://api.ivanon.io'
   },
   /*
   ** Style resources

@@ -97,7 +97,7 @@
       },
       updateUrl(path) {
         const i = { title: path, url: window.location.origin + '/' + path };
-        window.history.pushState(i, path, path);
+        window.history.replaceState(i, path, path);
       },
       handleMarkdown(text) {
         return markdown.toHTML(text).trim();

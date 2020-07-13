@@ -1,4 +1,5 @@
 require('dotenv').config()
+import axios from 'axios'
 
 export default {
   mode: 'universal',
@@ -78,6 +79,18 @@ export default {
     ** You can extend webpack config here
     */
     extend (config, ctx) {
+    }
+  },
+  generate: {
+    routes(callback) {
+      let items = [];
+      axios.get('https://api.ivanon.io/main').then((response) => {
+        response.data.posts.forEach(a => items.push(a.content.slug));
+        response.data.projects.forEach(a => items.push(a.content.slug));
+
+        callback(null, items)
+      }).catch(callback);
+
     }
   }
 }

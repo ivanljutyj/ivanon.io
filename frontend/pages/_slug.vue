@@ -98,8 +98,7 @@
         gsap.to(dot, { y: position, x: coords.left });
       },
       updateUrl(path) {
-        const i = { title: path, url: window.location.origin + '/' + path };
-        window.history.replaceState(i, path, path);
+        history.pushState({}, null, path);
       },
       handleMarkdown(text) {
         return markdown.toHTML(text).trim();

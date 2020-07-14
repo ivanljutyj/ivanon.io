@@ -62,7 +62,9 @@
       currentSection(section) {
         if (section.a()) {
           this.setDotPosition(this.getCoords(section.a()));
-          this.updateUrl(section.id);
+          if (this.$route.params.slug !== section.id) {
+            this.updateUrl(section.id);
+          }
         }
       },
       scrollPosition() {

@@ -139,7 +139,13 @@
   .posts {
     .post {
       &:first-child {
-        padding-top: 30px;
+        @include mq($from: desktop) {
+          padding-top: 30px;
+        }
+
+        @include mq($until: desktop) {
+          padding-top: 60px;
+        }
       }
       &.indented {
        display: flex;
@@ -218,7 +224,6 @@
     }
     @include mq($until: desktop) {
       left: -100%;
-      top: 60px;
       padding: 0 30px;
     }
     opacity: 0;

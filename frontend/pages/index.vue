@@ -90,7 +90,7 @@
         gsap.to(dot, { y: position, x: coords.left });
       },
       updateUrl(path) {
-        history.pushState({}, null, path);
+        history.pushState({}, null, `#/${path}`);
       },
       handleMarkdown(text) {
         return markdown.toHTML(text).trim();

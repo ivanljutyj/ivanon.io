@@ -69,6 +69,7 @@
   .menu {
     @include mq($until: desktop) {
       top: 60px;
+      left: 30px;
     }
     position: fixed;
     display: flex;

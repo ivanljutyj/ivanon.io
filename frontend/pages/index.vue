@@ -62,8 +62,9 @@
       scrollPosition() {
         let sections = this.sections.filter(section => section.posY <= window.scrollY);
         this.currentSection = sections[sections.length - 1];
+        console.log(this.$el.offsetHeight)
 
-        if (this.$el.offsetHeight + 50 === window.innerHeight + window.scrollY) {
+        if (this.$el.offsetHeight + 20 === window.innerHeight + window.scrollY) {
           this.currentSection = this.sections[this.sections.length - 1];
         }
       }
@@ -137,6 +138,9 @@
 <style lang="scss" scoped>
   .posts {
     .post {
+      &:first-child {
+        padding-top: 30px;
+      }
       &.indented {
        display: flex;
         flex-direction: column;
@@ -210,7 +214,6 @@
     @include mq($from: desktop) {
       width: 100%;
       max-width: 44rem;
-      top: 30px;
       left: 300px;
     }
     @include mq($until: desktop) {

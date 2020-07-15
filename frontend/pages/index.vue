@@ -79,7 +79,7 @@
       getCoords(element) {
         if (element) {
           return {
-            top: element.offsetTop - 2,
+            top: element.offsetTop - 3,
             left: element.offsetLeft - 20,
             height: element.offsetHeight
           };

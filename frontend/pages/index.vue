@@ -117,14 +117,22 @@
         });
       }
     },
+    updated() {
+      console.log('test');
+    },
     mounted() {
       this.getSections();
       window.addEventListener('scroll', this.scroll, false)
 
-      this.updateUrl('ivanon');
-      this.sections.forEach(section => section.id === 'ivanon' ? this.currentSection = section : null);
-      document.getElementById('post-ivanon').scrollIntoView();
+      let path = 'ivanon';
+      if (location.hash.length) {
+        path = location.hash.substring(2, location.hash.length)
+      }  else {
+        this.updateUrl(path);
+      }
 
+      this.sections.forEach(section => section.id === path ? this.currentSection = section : null);
+      this.currentSection.el.scrollIntoView();
     }
   }
 </script>

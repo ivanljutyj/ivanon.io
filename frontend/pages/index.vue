@@ -159,7 +159,7 @@
       border-bottom: 1px solid rgba(0, 0, 0, 0.2);
       &__title {
         font-weight: bold;
-        font-size: 14px;
+        font-size: 16px;
         margin-bottom: 5px;
       }
       &__subtitle {
@@ -167,7 +167,7 @@
       }
       &__content {
         line-height: 1.3;
-        font-size: 14px;
+        font-size: 15px;
       }
       &__images {
         display: flex;

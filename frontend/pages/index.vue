@@ -117,9 +117,6 @@
         });
       }
     },
-    updated() {
-      console.log('test');
-    },
     mounted() {
       this.getSections();
       window.addEventListener('scroll', this.scroll, false)

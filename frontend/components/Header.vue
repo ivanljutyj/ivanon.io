@@ -36,6 +36,7 @@
     mounted() {
       const tl = gsap.timeline();
       tl.to('.header', 1, { opacity: 1, height: "60px", width: "100%" });
+      tl.to('.posts', 1, { left: 0 }, '-=0.8');
       tl.staggerTo('.post', 1, { opacity: 1 }, 0.3,"-=0.6");
       tl.to('.header__title', 1, { opacity: 1, left: "30px" }, "-=1");
 

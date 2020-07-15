@@ -16,7 +16,7 @@ export default {
     tl.to('.sidebar', 0.5, { width: "250px" });
     tl.staggerTo('.sidebar .content div', 1, { opacity: 1 }, 0.3);
     tl.add(() => this.$emit('loaded', true));
-    tl.to('.posts', 1, { opacity: 1 }, "-=0.5");
+    tl.staggerTo('.post', 1, { opacity: 1 }, 0.3,"-=0.5");
   }
 }
 </script>

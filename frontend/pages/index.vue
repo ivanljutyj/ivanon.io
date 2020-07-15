@@ -138,6 +138,7 @@
 <style lang="scss" scoped>
   .posts {
     .post {
+      opacity: 0;
       &:first-child {
         @include mq($from: desktop) {
           padding-top: 30px;
@@ -226,6 +227,5 @@
       left: -100%;
       padding: 0 30px;
     }
-    opacity: 0;
   }
 </style>
